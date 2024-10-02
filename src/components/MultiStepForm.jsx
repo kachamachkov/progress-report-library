@@ -2,6 +2,7 @@ import { useState } from 'react';
 import useMultiStepForm from '../hooks/useMultiStepForm';
 import DemoReportTitles from './DemoReportTitles';
 import DemoReportFormats from './DemoReportFormats';
+import GetReport from './GetReport';
 
 const INITIAL_DATA = {
   reportName: '',
@@ -15,7 +16,7 @@ export default function MultiStepForm() {
     useMultiStepForm([
       <DemoReportTitles {...data} updateFields={updateFields} />,
       <DemoReportFormats {...data} updateFields={updateFields} />,
-      <div>Page Three</div>,
+      <GetReport {...data} />,
     ]);
 
   function updateFields(fields) {
