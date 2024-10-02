@@ -4,7 +4,7 @@ import MultiStepForm from './components/MultiStepForm';
 function App() {
   return (
     <>
-      <div>
+      <div className='form-wrapper'>
         <MultiStepForm />
       </div>
     </>

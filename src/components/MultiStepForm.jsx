@@ -37,11 +37,15 @@ export default function MultiStepForm() {
 
       <div>
         {!isFirstStep && (
-          <button onClick={back} type='button'>
+          <button onClick={back} type='button' className='back-btn'>
             Back
           </button>
         )}
-        {!isLastStep && <button type='submit'>Next</button>}
+        {!isLastStep && (
+          <button type='submit' className='next-btn'>
+            Next
+          </button>
+        )}
       </div>
     </form>
   );
