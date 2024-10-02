@@ -43,7 +43,7 @@ export const useCreateDemoReport = (reportName, reportFormat) => {
             parameterValues: {},
           }
         );
-        setReportParams = paramsResponse.data;
+        setReportParams(paramsResponse.data)
 
         const instanceResponse = await axios.post(
           `https://demos.telerik.com/reporting/api/reports/clients/${clientId}/instances`,
@@ -110,8 +110,9 @@ export const useCreateDemoReport = (reportName, reportFormat) => {
   }, [reportName, reportFormat]);
 
   const downloadReport = async () => {
-    if (!formatDocumentId || !instanceId || clientId) {
+    if (!formatDocumentId || !instanceId || !clientId) {
       console.error('Missing required parameters to download the document.');
+      console.log(formatDocumentId, instanceId, clientId)
       return;
     }
 
@@ -136,6 +137,8 @@ export const useCreateDemoReport = (reportName, reportFormat) => {
       console.error('Error downloading the document:', error);
     }
   };
+
+  console.log(error)
 
   return {
     downloadReport,
