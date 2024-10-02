@@ -1,5 +1,5 @@
-export const mapReportName = (reportName) => {
-  switch (reportName) {
+export const mapReportName = (name) => {
+  switch (name) {
     case 'Swiss QR Bill Report':
       return 'SwissQRBill';
     case 'Crypto Currency Info':
@@ -19,6 +19,6 @@ export const mapReportName = (reportName) => {
     case 'Sales Dashboard':
       return 'SalesByRegionDashboard';
     default:
-      return reportName;
+      return name;
   }
 };
