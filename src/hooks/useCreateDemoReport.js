@@ -112,7 +112,6 @@ export const useCreateDemoReport = (reportName, reportFormat) => {
   const downloadReport = async () => {
     if (!formatDocumentId || !instanceId || !clientId) {
       console.error('Missing required parameters to download the document.');
-      console.log(formatDocumentId, instanceId, clientId)
       return;
     }
 
@@ -138,7 +137,6 @@ export const useCreateDemoReport = (reportName, reportFormat) => {
     }
   };
 
-  // console.log(error)
 
   return {
     downloadReport,
