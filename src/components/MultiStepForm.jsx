@@ -28,11 +28,21 @@ export default function MultiStepForm() {
     if (!isLastStep) return next();
   }
 
+  const progress = ((currentStepIndex + 1) / steps.length) * 100;
+
   return (
     <form onSubmit={onSubmit}>
-      <div>
-        {currentStepIndex + 1} / {steps.length}
+      <div className='progress-bar'>
+        <div
+          className='progress-bar-filled'
+          style={{ width: `${progress}%` }}
+        ></div>
       </div>
+
+      {/* <div>
+        {currentStepIndex + 1} / {steps.length}
+      </div> */}
+
       {step}
 
       <div>
