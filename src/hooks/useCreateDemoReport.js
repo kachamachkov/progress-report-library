@@ -138,7 +138,7 @@ export const useCreateDemoReport = (reportName, reportFormat) => {
     }
   };
 
-  console.log(error)
+  // console.log(error)
 
   return {
     downloadReport,
