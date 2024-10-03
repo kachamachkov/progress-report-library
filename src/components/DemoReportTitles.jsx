@@ -1,11 +1,12 @@
 import { useGetDemoReportTitles } from '../hooks/useGetDemoReportTitles';
 import FormWrapper from './FormWrapper';
+import Spinner from './Spinner';
 
 export default function DemoReportTitles({ reportName, updateFields }) {
   const { titles, loading, error } = useGetDemoReportTitles();
 
   if (loading) {
-    return <p>Loading</p>;
+    return <Spinner loading={loading} />;
   }
 
   if (error) {
