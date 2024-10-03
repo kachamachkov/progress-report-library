@@ -8,13 +8,13 @@ export default function GetReport({ reportName, reportFormat }) {
     reportFormat
   );
 
-  if (loading) {
-    return <Spinner loading={loading} />;
-  }
-
-  return (
+  return loading ? (
+    <Spinner loading={loading} />
+  ) : (
     <FormWrapper title='Result'>
-      <button className='download' onClick={downloadReport}>Download</button>
+      <button className='download' onClick={downloadReport}>
+        Download
+      </button>
 
       {Error && <div className='error'>{error}</div>}
     </FormWrapper>
