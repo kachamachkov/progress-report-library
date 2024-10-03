@@ -5,11 +5,9 @@ import Spinner from './Spinner';
 export default function DemoReportFormats({ reportFormat, updateFields }) {
   const { formats, loading, error } = useGetDemoReportFormats();
 
-  if (loading) {
-    return <Spinner loading={loading} />;
-  }
-
-  return (
+  return loading ? (
+    <Spinner loading={loading} />
+  ) : (
     <FormWrapper title='Export Format'>
       <label htmlFor='format-select'>Choose a file format:</label>
       <select

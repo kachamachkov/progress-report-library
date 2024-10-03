@@ -14,7 +14,7 @@ export default function GetReport({ reportName, reportFormat }) {
 
   return (
     <FormWrapper title='Result'>
-      <button onClick={downloadReport}>Download</button>
+      <button className='download' onClick={downloadReport}>Download</button>
 
       {Error && <div className='error'>{error}</div>}
     </FormWrapper>

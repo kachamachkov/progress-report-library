@@ -5,11 +5,9 @@ import Spinner from './Spinner';
 export default function DemoReportTitles({ reportName, updateFields }) {
   const { titles, loading, error } = useGetDemoReportTitles();
 
-  if (loading) {
-    return <Spinner loading={loading} />;
-  }
-
-  return (
+  return loading ? (
+    <Spinner loading={loading} />
+  ) : (
     <FormWrapper title='Reports'>
       <label htmlFor='title-select'>Choose a Report:</label>
       <select
@@ -29,7 +27,7 @@ export default function DemoReportTitles({ reportName, updateFields }) {
         ))}
       </select>
 
-      {Error && <div className='error'>{error}</div>}
+      {error && <div className='error'>{String(error)}</div>}
     </FormWrapper>
   );
 }

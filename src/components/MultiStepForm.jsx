@@ -48,10 +48,6 @@ export default function MultiStepForm() {
         ></div>
       </div>
 
-      {/* <div>
-        {currentStepIndex + 1} / {steps.length}
-      </div> */}
-
       {step}
 
       <div className='controls'>
