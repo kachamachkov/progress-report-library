@@ -57,12 +57,28 @@
   margin-right: 0.8rem;
 }
 
-.form-wrapper{
+.form-wrapper {
   padding: 100px;
   border: 1px solid black;
-  background-color:#e8e3e325 ;
+  background-color: #e8e3e325;
   border-radius: 16px;
 }
-.form-wrapper form{
+
+.form-wrapper form {
   width: 350px;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  height: 10px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.progress-bar-filled {
+  background-color: rgb(92, 229, 0);
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.3s ease;
 }
