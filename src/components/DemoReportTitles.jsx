@@ -9,10 +9,6 @@ export default function DemoReportTitles({ reportName, updateFields }) {
     return <Spinner loading={loading} />;
   }
 
-  if (error) {
-    return <p>{error}</p>;
-  }
-
   return (
     <FormWrapper title='Reports'>
       <label htmlFor='title-select'>Choose a Report:</label>
@@ -32,6 +28,8 @@ export default function DemoReportTitles({ reportName, updateFields }) {
           </option>
         ))}
       </select>
+
+      {Error && <div className='error'>{error}</div>}
     </FormWrapper>
   );
 }

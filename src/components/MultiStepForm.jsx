@@ -45,7 +45,9 @@ export default function MultiStepForm() {
 
       {step}
 
-      <div>
+      
+
+      <div className='controls'>
         {!isFirstStep && (
           <button onClick={back} type='button' className='back-btn'>
             Back

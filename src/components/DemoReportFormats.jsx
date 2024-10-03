@@ -9,10 +9,6 @@ export default function DemoReportFormats({ reportFormat, updateFields }) {
     return <Spinner loading={loading} />;
   }
 
-  if (error) {
-    return <p>{error}</p>;
-  }
-
   return (
     <FormWrapper title='Export Format'>
       <label htmlFor='format-select'>Choose a file format:</label>
@@ -27,6 +23,8 @@ export default function DemoReportFormats({ reportFormat, updateFields }) {
           </option>
         ))}
       </select>
+
+      {Error && <div className='error'>{error}</div>}
     </FormWrapper>
   );
 }

@@ -12,13 +12,11 @@ export default function GetReport({ reportName, reportFormat }) {
     return <Spinner loading={loading} />;
   }
 
-  if (error) {
-    return <p>Error: {String(error)}</p>;
-  }
-
   return (
     <FormWrapper title='Result'>
       <button onClick={downloadReport}>Download</button>
+
+      {Error && <div className='error'>{error}</div>}
     </FormWrapper>
   );
 }
