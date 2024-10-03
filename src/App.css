@@ -53,11 +53,16 @@
   margin-right: 0.8rem;
 }
 
+.dropdown select{
+  border-radius: 5px;
+}
+
 .form-wrapper {
-  padding: 5rem;
+  padding: 2.5rem;
   border: 1px solid transparent;
   background-color: #cdc8c82d;
   border-radius: 16px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 .form-wrapper form {
@@ -90,9 +95,7 @@
 }
 
 .progress-logo {
-  position: absolute;
-  top: 25px;
-  left: 25px;
+  display: flex;
   width: 100px;
   height: auto;
 }
