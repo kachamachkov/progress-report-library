@@ -91,6 +91,8 @@
 }
 
 .error {
+  padding-top: 10px;
+  font-weight: 400;
   color: red;
 }
 

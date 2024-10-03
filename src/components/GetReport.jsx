@@ -16,7 +16,7 @@ export default function GetReport({ reportName, reportFormat }) {
         Download
       </button>
 
-      {Error && <div className='error'>{error}</div>}
+      {error && <div className='error'>{error}</div>}
     </FormWrapper>
   );
 }

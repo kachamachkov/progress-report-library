@@ -15,6 +15,10 @@ export default function DemoReportFormats({ reportFormat, updateFields }) {
         value={reportFormat}
         onChange={(e) => updateFields({ reportFormat: e.target.value })}
       >
+        <option value='' disabled>
+          -- Select a Format --
+        </option>
+
         {formats.map((format, index) => (
           <option key={index} value={format.name}>
             {format.localizedName}

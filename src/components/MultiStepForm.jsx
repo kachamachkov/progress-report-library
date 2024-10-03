@@ -6,7 +6,7 @@ import GetReport from './GetReport';
 
 const INITIAL_DATA = {
   reportName: '',
-  reportFormat: 'PDF',
+  reportFormat: '',
 };
 
 export default function MultiStepForm() {

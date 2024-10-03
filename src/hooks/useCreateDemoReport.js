@@ -17,6 +17,11 @@ export const useCreateDemoReport = (reportName, reportFormat) => {
   useEffect(() => {
     (async () => {
       try {
+        if (reportFormat === '') {
+          setError('Oops! You missed to select a format.');
+          return;
+        }
+
         setLoading(true);
 
         const timestamp = Date.now();
@@ -43,7 +48,7 @@ export const useCreateDemoReport = (reportName, reportFormat) => {
             parameterValues: {},
           }
         );
-        setReportParams(paramsResponse.data)
+        setReportParams(paramsResponse.data);
 
         const instanceResponse = await axios.post(
           `https://demos.telerik.com/reporting/api/reports/clients/${clientId}/instances`,
@@ -136,7 +141,6 @@ export const useCreateDemoReport = (reportName, reportFormat) => {
       console.error('Error downloading the document:', error);
     }
   };
-
 
   return {
     downloadReport,
