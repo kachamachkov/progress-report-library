@@ -1,11 +1,12 @@
 import { useGetDemoReportFormats } from '../hooks/useGetDemoReportFormats';
 import FormWrapper from './FormWrapper';
+import Spinner from './Spinner';
 
 export default function DemoReportFormats({ reportFormat, updateFields }) {
   const { formats, loading, error } = useGetDemoReportFormats();
 
   if (loading) {
-    return <p>Loading</p>;
+    return <Spinner loading={loading} />;
   }
 
   if (error) {

@@ -1,5 +1,6 @@
 import { useCreateDemoReport } from '../hooks/useCreateDemoReport';
 import FormWrapper from './FormWrapper';
+import Spinner from './Spinner';
 
 export default function GetReport({ reportName, reportFormat }) {
   const { downloadReport, error, loading } = useCreateDemoReport(
@@ -8,7 +9,7 @@ export default function GetReport({ reportName, reportFormat }) {
   );
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <Spinner loading={loading} />;
   }
 
   if (error) {
