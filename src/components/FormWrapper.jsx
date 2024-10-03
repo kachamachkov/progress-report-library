@@ -1,7 +1,7 @@
 export default function FormWrapper({ title, children }) {
   return (
     <>
-      <h2>{title}</h2>
+      <h2 className="page-title">{title}</h2>
       <div className='dropdown'>{children}</div>
     </>
   );

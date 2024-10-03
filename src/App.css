@@ -101,3 +101,7 @@
   width: 100px;
   height: auto;
 }
+
+.page-title{
+  font-family: monospace;
+}
