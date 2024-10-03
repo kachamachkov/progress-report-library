@@ -32,6 +32,15 @@ export default function MultiStepForm() {
 
   return (
     <form onSubmit={onSubmit}>
+      <header className='header'>
+        <a href='https://www.progress.com/'>
+          <img
+            src='/progress-logo.png'
+            alt='Progress Logo'
+            className='progress-logo'
+          />
+        </a>
+      </header>
       <div className='progress-bar'>
         <div
           className='progress-bar-filled'
@@ -44,8 +53,6 @@ export default function MultiStepForm() {
       </div> */}
 
       {step}
-
-      
 
       <div className='controls'>
         {!isFirstStep && (

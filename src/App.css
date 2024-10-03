@@ -60,9 +60,9 @@
 }
 
 .form-wrapper {
-  padding: 100px;
-  border: 1px solid black;
-  background-color: #e8e3e325;
+  padding: 5rem;
+  border: 1px solid transparent;
+  background-color: #cdc8c82d;
   border-radius: 16px;
 }
 
@@ -88,4 +88,17 @@
 .controls {
   display: flex;
   justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.error {
+  color: red;
+}
+
+.progress-logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 100px;
+  height: auto;
 }
